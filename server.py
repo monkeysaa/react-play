@@ -47,13 +47,12 @@ def show_users():
     """Show all users."""
     
     users = User.query.all()
-    # return render_template('view_users.html', users=users)
+    user_list = []
+
+    for u in users:
+        user_list.append({"user_id": u.user_id, "email": u.email, "password": u.password})
     
-    print(users)
-    foo = [{"id": 0, "email": "foo@bar.com"}]
-    
-    #return str(users)
-    return jsonify(foo)
+    return jsonify({"user_list": user_list})
 
 
 
