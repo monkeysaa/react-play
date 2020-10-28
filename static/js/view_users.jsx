@@ -12,5 +12,5 @@ function ViewUsers() {
 
 ReactDOM.render(
   <ViewUsers />, 
-  document.querySelector('#app')
+  document.querySelector('#main')
 );
