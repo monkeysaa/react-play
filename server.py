@@ -33,14 +33,14 @@ class User(db.Model):
 def show_homepage():
     """Show the application's homepage."""
 
-    return render_template('single_page.html')
+    return render_template('homepage.html')
 
 
-@app.route('/profile')
-def show_profile():
-    """Show the users profile page."""
+# @app.route('/profile')
+# def show_profile():
+#     """Show the users profile page."""
 
-    return render_template('profile.html')
+#     return render_template('profile.html')
 
 @app.route('/view_users')
 def show_users():
@@ -49,10 +49,21 @@ def show_users():
     users = User.query.all()
     user_list = []
 
-    for u in users:
-        user_list.append({"user_id": u.user_id, "email": u.email, "password": u.password})
+    # for u in users:
+
+    #     user_list.append({"user_id": u.user_id, "email": u.email, "password": u.password})
+
+    # return jsonify({"user_list": user_list})
+
+    user_dict = {}
     
-    return jsonify({"user_list": user_list})
+    for u in users: 
+        user_dict[u.user_id] = u.email
+    
+    return jsonify(user_dict)
+
+    
+
 
 
 
