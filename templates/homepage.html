@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edvid</title>
-  
+
   <!-- Load React dependencies. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
@@ -21,9 +22,18 @@
   <nav id="navbar"></nav>
 
   <!-- Mount your react components on to this element. -->
-  <main id="main"></main>
-  <section id="users"></section>
+  <main id="main">
+  </main>
+ 
+  <section id="users" style ="display: none"></section>
+  <!-- <section id="users" style ="display: none"></section> -->
 
   <script src="/static/js/single_page.jsx" type="text/jsx"></script>
 </body>
+
+
+<footer id="homepage">
+  <p><a href='/'> Back to Home </a> </p>
+</footer>
+
 </html>
